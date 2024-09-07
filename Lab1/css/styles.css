@@ -1,0 +1,34 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  background-color: aqua;
+  height: 100vh;
+  width: 100vw;
+  ;
+}
+
+.prompt-container {
+  align-items: center;
+}
+
+.prompt-text {
+  display: flex;
+  justify-content: center;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.shape {
+  background-color: red;
+}
+
+.square-area {
+  display: flex;
+}
