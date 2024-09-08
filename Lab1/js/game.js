@@ -5,11 +5,11 @@ export class Game {
   constructor() {
     this.start = document.getElementById('start-button');
     this.input = document.getElementById('number-input');
-    
+
   };
 
   attachEventListener() {
-    this.start.addEventListener('click', () => this.validateInput());
+    this.start.addEventListener('click', () => this.handleClick());
   };
 
   // Ensure input falls within the range
@@ -24,8 +24,22 @@ export class Game {
     const validNum = this.validateInput();
 
     if (validNum) {
-      
+      // Create the correct number of squares 
+      this.createButtons(validNum);
     };
+  };
+
+  createButtons(n) {
+    const buttons = [];
+
+    for (let i = 0; i < n; i++) {
+      console.log("Creating Button!");
+      const button = new Button();
+      button.createButtonElement();
+      buttons.push(button);
+    };
+
+    return buttons;
   };
 
   // Call this every time randomizeSquares is called 

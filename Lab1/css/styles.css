@@ -33,6 +33,9 @@ body {
   display: flex;
 }
 
-#number-input {
-  
+.square-button {
+  text-align: center;
+  align-items: center;
 }
+
+#number-input {}

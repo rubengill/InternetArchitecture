@@ -1,33 +1,21 @@
-class Button {
-  constructor(width = "10em", height = "5em", label) {
+export class Button {
+  constructor(width, height, label) {
     this.width = width;
     this.height = height;
     this.label = label;
   };
 
-  // Create the Square
+  // Create the Button
   createButtonElement() {
     console.log("Creating Button!");
 
+    const button = document.createElement("div");
+    button.classList.add("square-button")
+
     button.textContent = this.label;
-    button.style.width = this.width;
-    button.style.height = this.height;
-    button.style.background = this.randomColor();
+    button.style.backgroundColor = this.randomColor();
 
     return button;
-  };
-
-  // Create the correct number of buttons
-  createButtons(n) {
-    const buttonArray = [];
-
-    for (let i = 0; i < n; i++) {
-      console.log("Creating Button!");
-      const button = this.createButtonElement();
-      buttonArray.push(button);
-    };
-
-    return buttonArray;
   };
 
   // Assign a random color to the button
