@@ -1,15 +1,14 @@
 class Button {
-  constructor(width = "10em", height = "5em", label = null) {
+  constructor(width = "10em", height = "5em", label) {
     this.width = width;
     this.height = height;
     this.label = label;
   };
 
-  // Create the Button
+  // Create the Square
   createButtonElement() {
     console.log("Creating Button!");
-    
-    const button = document.createElement('button');
+
     button.textContent = this.label;
     button.style.width = this.width;
     button.style.height = this.height;
@@ -21,7 +20,7 @@ class Button {
   // Create the correct number of buttons
   createButtons(n) {
     const buttonArray = [];
-    
+
     for (let i = 0; i < n; i++) {
       console.log("Creating Button!");
       const button = this.createButtonElement();
@@ -42,9 +41,6 @@ class Button {
     return color;
   };
 
-  //Append buttons to the DOM
-  appendButtons(button) {
 
-  };
 };
 
