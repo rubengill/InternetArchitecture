@@ -5,7 +5,8 @@ export class Game {
   constructor() {
     this.start = document.getElementById('start-button');
     this.input = document.getElementById('number-input');
-
+    this.buttonArea = document.getElementById('button-area');
+    this.buttons = [];
   };
 
   attachEventListener() {
@@ -14,7 +15,6 @@ export class Game {
 
   // Ensure input falls within the range
   validateInput() {
-    console.log("input being validated")
     const num = parseInt(this.input.value);
 
     return (num >= 3 && num <= 7) ? num : alert("Please enter a number between 3 and 7.");
@@ -24,26 +24,36 @@ export class Game {
     const validNum = this.validateInput();
 
     if (validNum) {
-      // Create the correct number of squares 
+      this.clearButtons();
       this.createButtons(validNum);
+      this.insertButtons();
     };
   };
 
   createButtons(n) {
-    const buttons = [];
-
-    for (let i = 0; i < n; i++) {
-      console.log("Creating Button!");
-      const button = new Button();
-      button.createButtonElement();
-      buttons.push(button);
+    for (let i = 1; i <= n; i++) {
+      console.log("Creating Button loop!");
+      const button = new Button(undefined, undefined, i);
+      const buttonElement = button.createButtonElement();
+      this.buttons.push(buttonElement);
     };
-
-    return buttons;
   };
 
-  // Call this every time randomizeSquares is called 
-  // checkWindowSize() {
+  insertButtons() {
+    this.buttons.forEach(button => {
+      this.buttonArea.appendChild(button);
+    });
+  };
 
-  // };
+  clearButtons() {
+    this.buttons.length = 0;
+    this.buttonArea.innerHTML = '';
+  };
+
 };
+
+
+// Call this every time randomizeSquares is called
+// checkWindowSize() {
+
+// };

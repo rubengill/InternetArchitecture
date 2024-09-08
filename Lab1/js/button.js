@@ -1,11 +1,12 @@
 export class Button {
-  constructor(width, height, label) {
+  constructor(width = "10em", height = "5em", label, isClickable = false) {
     this.width = width;
     this.height = height;
     this.label = label;
+    this.isClickable = isClickable;
+    this.backgroundColor = this.randomColor();
   };
 
-  // Create the Button
   createButtonElement() {
     console.log("Creating Button!");
 
@@ -13,22 +14,21 @@ export class Button {
     button.classList.add("square-button")
 
     button.textContent = this.label;
-    button.style.backgroundColor = this.randomColor();
+    button.style.backgroundColor = this.backgroundColor;
+    button.style.width = this.width;
+    button.style.height = this.height;
 
     return button;
   };
 
-  // Assign a random color to the button
   randomColor() {
-    const letters = "0123456789ABCDEF";
+    const letters = "456789ABCDEF";
     let color = "#";
     for (let i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 16)];
+      color += letters[Math.floor(Math.random() * letters.length)];
     };
 
     return color;
   };
-
-
 };
 
