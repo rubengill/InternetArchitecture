@@ -21,6 +21,7 @@ class Button {
   // Create the correct number of buttons
   createButtons(n) {
     const buttonArray = [];
+    
     for (let i = 0; i < n; i++) {
       console.log("Creating Button!");
       const button = this.createButtonElement();
