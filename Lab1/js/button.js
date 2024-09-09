@@ -1,15 +1,18 @@
+import messages from '../lang/messages/en/user.js'
+
 export class Button {
-  constructor(width = "10em", height = "5em", label, isClickable = false) {
+  static defaultWidth = messages.width;
+  static defaultHeight = messages.height;
+
+  constructor(width = Button.defaultWidth, height = Button.defaultHeight, label) {
     this.width = width;
     this.height = height;
     this.label = label;
-    this.isClickable = isClickable;
     this.backgroundColor = this.randomColor();
+    this.buttonElement = null;
   };
 
   createButtonElement() {
-    console.log("Creating Button!");
-
     const button = document.createElement("div");
     button.classList.add("square-button")
 
@@ -17,20 +20,26 @@ export class Button {
     button.style.backgroundColor = this.backgroundColor;
     button.style.width = this.width;
     button.style.height = this.height;
+    this.buttonElement = button;
 
     return button;
   };
 
   randomColor() {
-    const letters = "456789ABCDEF";
-    let color = "#";
+    const letters = messages.letters;
+    let color = messages.color;
     for (let i = 0; i < 6; i++) {
       color += letters[Math.floor(Math.random() * letters.length)];
     };
 
     return color;
   };
+
+  hideButtonLabel() {
+    if (this.buttonElement) {
+      this.buttonElement.textContent = '';
+    };
+  };
 };
 
-// Need to implement logic for clicking the buttons as well 
 
