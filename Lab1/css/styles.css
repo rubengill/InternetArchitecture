@@ -28,12 +28,19 @@ body {
 }
 
 #button-area {
+  position: relative;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  align-content: start;
+  width: 100%;
+  height: 100%;
 }
 
 .square-button {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  flex-shrink: 0;
 }

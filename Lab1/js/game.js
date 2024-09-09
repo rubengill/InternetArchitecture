@@ -1,4 +1,5 @@
 import { Button } from './button.js'
+import { GameLogic } from './gamelogic.js';
 
 export class Game {
 
@@ -7,6 +8,7 @@ export class Game {
     this.input = document.getElementById('number-input');
     this.buttonArea = document.getElementById('button-area');
     this.buttons = [];
+    this.gameLogic = null;
   };
 
   attachEventListener() {
@@ -27,6 +29,7 @@ export class Game {
       this.clearButtons();
       this.createButtons(validNum);
       this.insertButtons();
+      this.gameLogic = new GameLogic(this.buttons, this.buttonArea);
     };
   };
 
@@ -49,6 +52,20 @@ export class Game {
     this.buttons.length = 0;
     this.buttonArea.innerHTML = '';
   };
+
+  // logStuff() {
+  //   if (this.gameLogic) {
+  //     console.log("I am called")
+  //     this.gameLogic.getAreaDimensions();
+  //     this.gameLogic.logDimensions();
+  //   }
+  // };
+
+  // startGame() {
+  //   if (this.gameLogic) {
+  //     this.gameLogic.randomizeButton();
+  //   }
+  // };
 
 };
 

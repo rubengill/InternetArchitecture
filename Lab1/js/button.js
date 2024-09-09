@@ -32,3 +32,5 @@ export class Button {
   };
 };
 
+// Need to implement logic for clicking the buttons as well 
+
