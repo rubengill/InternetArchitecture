@@ -1,5 +1,8 @@
 import messages from '../lang/messages/en/user.js'
 
+/**
+ * Defines the logic and methods for the buttons in the game
+ */
 export class Button {
   static defaultWidth = messages.width;
   static defaultHeight = messages.height;

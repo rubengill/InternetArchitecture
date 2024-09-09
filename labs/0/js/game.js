@@ -2,6 +2,10 @@ import { Button } from './button.js'
 import { GameLogic } from './gamelogic.js';
 import messages from '../lang/messages/en/user.js';
 
+/**
+ * Sets up and initializes the game. Creates the button objects, and appends
+ * them to the display div. 
+ */
 export class Game {
 
   constructor() {

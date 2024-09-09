@@ -1,5 +1,8 @@
 import messages from "../lang/messages/en/user.js";
 
+/**
+ * Outlines the rules for the game
+ */
 export class GameLogic {
   constructor(buttons, buttonArea) {
     this.buttons = buttons;
