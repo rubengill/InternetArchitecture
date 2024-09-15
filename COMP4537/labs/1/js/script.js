@@ -1,4 +1,4 @@
-import { createButtons, createTitle } from "./notes.js";
+import { createButtons, createTitle } from "./notesui.js";
 
 // File is treated as a "main" method
 createButtons();

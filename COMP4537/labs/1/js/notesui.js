@@ -1,5 +1,7 @@
 import messages from '../lang/messages/en/user.js'
 
+//Handles the creation / updating of DOM elements
+
 export function createTitle() {
   const divElement = document.createElement('p');
   divElement.className = "title-text";
