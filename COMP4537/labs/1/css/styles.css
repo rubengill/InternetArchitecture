@@ -1,0 +1,5 @@
+.title-text {
+  display: flex;
+  justify-content: center;
+  font-size: large;
+}

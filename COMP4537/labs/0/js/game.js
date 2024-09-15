@@ -8,6 +8,9 @@ import messages from '../lang/messages/en/user.js';
  */
 export class Game {
 
+  /**
+   * Creates the game object
+   */
   constructor() {
     this.start = document.getElementById('start-button');
     this.input = document.getElementById('number-input');

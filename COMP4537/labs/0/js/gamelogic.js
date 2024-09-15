@@ -2,8 +2,16 @@ import messages from "../lang/messages/en/user.js";
 
 /**
  * Outlines the rules for the game
+ * 
+ * ChatGPT was used to help with the randomize function
  */
 export class GameLogic {
+  /**
+   * Construcs the GameLogic object
+   * 
+   * @param buttons - The buttons array created in Game 
+   * @param buttonArea - The element size that the buttons can be inserted into
+   */
   constructor(buttons, buttonArea) {
     this.buttons = buttons;
     this.buttonArea = buttonArea;
@@ -46,7 +54,6 @@ export class GameLogic {
     this.randomizeButtons();
 
     for (let i = 1; i < n; i++) {
-      console.log(`${n}`)
       setTimeout(() => {
         this.randomizeButtons();
       }, i * 2000);
