@@ -6,6 +6,7 @@ const messages = {
   writerPath: "./writer.html",
   readerPath: "./reader.html",
   buttonPath: "./index.html",
+  storageKey: "notes",
 
 };
 

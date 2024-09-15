@@ -12,8 +12,8 @@ class Note {
   };
 
   // Update the Notes content
-  updateContent() {
-
+  updateContent(newContent) {
+    this.content = newContent
   };
 
 
