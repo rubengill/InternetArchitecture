@@ -8,3 +8,9 @@
   display: flex;
   justify-content: space-evenly
 }
+
+.time {
+  display: flex;
+  justify-content: right;
+  margin-right: 30px;
+}
