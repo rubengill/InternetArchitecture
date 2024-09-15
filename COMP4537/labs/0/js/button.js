@@ -3,7 +3,6 @@ import messages from '../lang/messages/en/user.js'
 /**
  * Defines the logic and methods for the buttons in the game
  * 
- * Used ChatGPT to help with the randomColor function
  */
 export class Button {
   static defaultWidth = messages.width;

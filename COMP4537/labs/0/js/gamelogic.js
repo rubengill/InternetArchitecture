@@ -3,7 +3,6 @@ import messages from "../lang/messages/en/user.js";
 /**
  * Outlines the rules for the game
  * 
- * ChatGPT was used to help with the randomize function
  */
 export class GameLogic {
   /**
