@@ -1,7 +1,10 @@
-class Note {
+/**
+ * Represents a note unit for the app
+ */
+export class Note {
 
   /**
-   * Contains the information for a Note unit in the application
+   * Instantiate a note object
    * 
    * @param id - ID of the note
    * @param content - Content of the note
@@ -11,10 +14,8 @@ class Note {
     this.content = content;
   };
 
-  // Update the Notes content
   updateContent(newContent) {
-    this.content = newContent
+    this.content = newContent;
   };
-
 
 };

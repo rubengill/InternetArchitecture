@@ -1,7 +1,5 @@
-import { createButtons, createTitle } from "./notesui.js";
-import { NoteManager } from "./notemanager.js";
+import { NoteUI } from "./notesui.js";
 
-// File is treated as a "main" method
-createButtons();
-createTitle();
-
+const noteUI = new NoteUI();
+noteUI.createButtons();
+noteUI.createTitle();

@@ -7,7 +7,9 @@ const messages = {
   readerPath: "./reader.html",
   buttonPath: "./index.html",
   storageKey: "notes",
-
+  add: "Add",
+  delete: "Delete",
+  submit: "Submit",
 };
 
 export default messages;

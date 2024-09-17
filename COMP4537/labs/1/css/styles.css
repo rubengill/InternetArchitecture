@@ -14,3 +14,22 @@
   justify-content: right;
   margin-right: 30px;
 }
+
+.note-area {
+  width: 100%;
+}
+
+.note-element {
+  display: flex;
+  justify-content: space-around;
+}
+
+.note-text {
+  overflow: hidden;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+.note-delete {
+  height: 40px;
+}
